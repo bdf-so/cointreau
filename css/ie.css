@@ -1,0 +1,809 @@
+@charset "UTF-8";
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+******************************************************************/
+/*
+----------------------------------------
+Imports & Dependencies
+----------------------------------------
+*/
+/*
+----------------------------------------
+Breakpoint and Grid Variables
+----------------------------------------
+*/
+/*
+----------------------------------------
+Colors
+----------------------------------------
+*/
+.bg-orange {
+  background-color: #fa4616;
+  color: #eceee5;
+}
+.bg-orange hr {
+  border: 0px;
+  border-top: 1px #eceee5 dotted !important;
+}
+.bg-orange a {
+  color: #eceee5;
+  transition: color 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+  text-decoration: none;
+}
+.bg-orange a:hover, .bg-orange a:focus {
+  color: #092d4d;
+}
+.bg-orange h3 span, .bg-orange .h3 span {
+  background-color: #fa4616;
+}
+
+.bg-navy {
+  background-color: #092d4d;
+  color: #eceee5;
+}
+.bg-navy hr {
+  border: 0px;
+  border-top: 1px #eceee5 dotted !important;
+}
+.bg-navy a {
+  color: #eceee5;
+  transition: color 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+  text-decoration: none;
+}
+.bg-navy a:hover, .bg-navy a:focus {
+  color: #092d4d;
+}
+.bg-navy h3 span, .bg-navy .h3 span {
+  background-color: #092d4d;
+}
+
+.bg-tan {
+  background-color: #eceee5;
+  color: #092d4d;
+}
+.bg-tan hr {
+  border: 0px;
+  width: 100px;
+  border-bottom: 3px #fa4616 solid;
+}
+.bg-tan a {
+  color: #092d4d;
+  transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+  text-decoration: none;
+}
+.text-larger .bg-tan a {
+  border-bottom: 2px #092d4d solid;
+}
+.bg-tan a:hover, .bg-tan a:focus {
+  color: #fa4616;
+  border-bottom-color: #fa4616;
+}
+.bg-tan h3 span, .bg-tan .h3 span {
+  background-color: #eceee5;
+}
+
+.p-y {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.p-y-half {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.p-y-4 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.p-x {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.p-x-half {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.p-x-4 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.p-xy {
+  padding: 32px;
+}
+
+.p-xy-half {
+  padding: 16px;
+}
+
+.p-xy-4 {
+  padding: 8px;
+}
+
+/*
+----------------------------------------
+Fonts
+----------------------------------------
+*/
+/*  @font-face {
+      font-family: 'Akkurat';
+      src: url('../fonts/_Akkurat.otf');
+      font-weight: normal;
+      font-style: normal;
+  }*/
+@font-face {
+  font-family: "Akkurat";
+  src: url("../fonts/Akkurat-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NimbusSans";
+  src: url("../fonts/NimbusSanConD-Bol.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+p {
+  hyphens: none !important;
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+  margin: 0px;
+  margin-bottom: 32px;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+p:last-child {
+  margin-bottom: 0px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-navy {
+  color: #092d4d;
+}
+
+.text-orange {
+  color: #fa4616;
+}
+
+.text-tan {
+  color: #eceee5;
+}
+
+.text-uppercase, .uppercase {
+  text-transform: uppercase;
+}
+
+.text-larger {
+  font-size: 1.25em;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin: 0;
+  line-height: 1.25;
+}
+
+strong {
+  font-family: "NimbusSans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.33rem;
+  position: relative;
+  top: 2px;
+  margin-left: 3px;
+  margin-right: 3px;
+  line-height: 1;
+}
+
+/*
+----------------------------------------
+General Tools
+----------------------------------------
+*/
+::-moz-selection {
+  color: #000000;
+  background: rgba(155, 155, 155, 0.4);
+}
+
+::selection {
+  color: #000000;
+  background: rgba(155, 155, 155, 0.4);
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/*
+----------------------------------------
+Transition
+----------------------------------------
+*/
+/*
+----------------------------------------
+Prefixer
+----------------------------------------
+*/
+/*
+----------------------------------------
+Dependency-free breakpoint mixin
+----------------------------------------
+*/
+/*
+----------------------------------------
+Normalize
+----------------------------------------
+*/
+*, input, :before, :after {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+----------------------------------------
+Gradients
+----------------------------------------
+*/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*
+----------------------------------------
+Box Sizing
+----------------------------------------
+*/
+/* @include box-sizing(border-box); */
+/*
+----------------------------------------
+IE Grid
+----------------------------------------
+*/
+h2, .h2 {
+  /*	padding-top: ($gutter*2);*/
+  padding-bottom: 64px;
+}
+
+/*
+----------------------------------------
+Intro
+----------------------------------------
+*/
+#intro {
+  height: 100vh;
+}
+#intro .grid {
+  height: 100%;
+}
+#intro .grid .grid__item {
+  height: 100%;
+}
+#intro .grid .grid__item figure {
+  padding-bottom: 0px;
+  height: 100%;
+}
+
+/*
+----------------------------------------
+Holiday Hosting Guide
+----------------------------------------
+*/
+#holiday-hosting-guide .header-grid .grid__item {
+  padding: 64px 96px;
+}
+#holiday-hosting-guide .header-grid .grid__item:first-child {
+  /*border-right: 3px $orange solid;*/
+}
+
+.masonry-item {
+  width: 33.333%;
+}
+
+.masonry-container {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.tip-header {
+  height: 260px;
+  overflow: hidden;
+  border-bottom: 3px #fa4616 solid;
+  padding-bottom: 32px;
+}
+.tip-header h3 {
+  width: 75%;
+}
+
+#recipes figure + .padding h4 {
+  opacity: 0;
+}
+
+.recipe-block .grid__item:hover h4 {
+  display: none;
+}
+
+.recipe-block .grid__item:hover .overlay-img {
+  display: block;
+}
+
+.recipe-block .grid__item:hover .actual-img {
+  display: none;
+}
+
+/*
+----------------------------------------
+General
+----------------------------------------
+*/
+body.navigation-open .container, body.navigation-open .global-navigation-handle {
+  -ms-transform: translateX(420px);
+  -webkit-transform: translateX(420px);
+  transform: translateX(420px);
+}
+
+.large-text p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.large-text p.smaller-text {
+  font-size: 0.85rem;
+}
+
+.xlarge-padding {
+  padding: 75px !important;
+}
+
+.large-padding {
+  padding: 50px;
+}
+
+.large-padding-sides {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.large-padding-top {
+  padding-top: 64px;
+}
+
+.margin-bottom-large {
+  margin-bottom: 64px !important;
+}
+
+.large--push-right {
+  float: right;
+}
+
+.background-image.background-image-landscape {
+  background-attachment: fixed;
+  height: 640px;
+}
+
+.large--text-right {
+  text-align: right;
+}
+
+.large-equal-height {
+  position: relative;
+}
+.large-equal-height:before {
+  width: 50%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-size: cover;
+}
+.large-equal-height.image-right:before {
+  left: auto;
+  right: 0px;
+}
+.large-equal-height .grid__item:first-child {
+  display: none !important;
+}
+.large-equal-height .grid__item:last-child {
+  float: none !important;
+  position: relative;
+  left: 50%;
+  width: 50%;
+}
+.large-equal-height .grid__item:last-child.large--pull-left {
+  left: 0%;
+}
+.large-equal-height .background-image {
+  padding-bottom: 125%;
+}
+
+.spacer {
+  display: none;
+}
+
+.small-margin-bottom {
+  margin-bottom: 1em;
+}
+
+/*
+----------------------------------------
+Header
+----------------------------------------
+*/
+header.site-header {
+  font-size: 150%;
+  background-size: cover;
+  padding-top: 70px;
+}
+header.site-header .header-wrap {
+  max-width: 840px;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+}
+header.site-header .header-wrap .inner {
+  max-width: none;
+}
+header.site-header .table {
+  position: absolute;
+  top: 75%;
+  margin-top: -78px;
+  height: auto;
+}
+header.site-header .subhead:after, header.site-header .subhead:before {
+  width: 40%;
+}
+
+/*
+----------------------------------------
+About
+----------------------------------------
+*/
+#about .large-equal-height:before {
+  background-image: url("../images/vcpcny2020/vcpcny2020-01.jpg");
+  background-position: center 25%;
+}
+
+/*
+----------------------------------------
+Tickets
+----------------------------------------
+*/
+#tickets .large-equal-height:before {
+  background-image: url("../images/vcpcny2020/vcpcny2020-02.jpg");
+  background-position: center top;
+}
+#tickets .large-equal-height.vcpcny2017-clicquotstylesweeps2:before {
+  background-image: url("../images/vcpcny2017-clicquotstylesweeps.jpg");
+  background-position: center center;
+}
+
+/*.buy-tickets-wrap{
+	min-height: 130px;
+}*/
+.tickets-detail {
+  height: 96px;
+}
+
+.tickets-details {
+  height: 520px;
+  position: relative;
+}
+.tickets-details .fine-print {
+  position: absolute;
+  bottom: 32px;
+  width: 100%;
+}
+.tickets-details .fine-print p {
+  margin: 0;
+}
+
+.transportation-info-wrap ul {
+  height: 640px;
+}
+
+/*
+----------------------------------------
+Clicquot Picnic
+----------------------------------------
+*/
+.clicquotpicnic-image {
+  display: none !important;
+}
+
+.clicquot-picnic-bg {
+  padding-bottom: 105%;
+  display: block;
+}
+
+.clicquotpicnic .section-title h3 {
+  text-align: left;
+}
+
+ul.large-padding-right li {
+  padding-right: 32px;
+}
+
+/*
+----------------------------------------
+Location
+----------------------------------------
+*/
+#location .margin-bottom-large {
+  margin-bottom: 64px !important;
+}
+#location .large-equal-height:before {
+  background-image: url("../images/vcpcla2018-location-01.jpg");
+  background-position: center center;
+}
+
+/*
+----------------------------------------
+General Rules
+----------------------------------------
+*/
+#general-rules .large-equal-height:before {
+  background-position: center top;
+  background-image: url("../images/vcpcla2019-generalrules-01.jpg");
+}
+
+/*
+----------------------------------------
+Clicquot Rich
+----------------------------------------
+*/
+#clicquot-rich figure img {
+  width: 75%;
+  margin-bottom: 2em;
+}
+#clicquot-rich .clicquot-content-rich {
+  height: 0px;
+  padding-top: 0px;
+  padding-bottom: 125%;
+  position: relative;
+}
+#clicquot-rich .clicquot-content-rich .article-wrap {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+#clicquot-rich .clicquot-content-rich .article-wrap .table {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+#clicquot-rich .clicquot-content-rich .article-wrap .table .content {
+  line-height: 1.25;
+}
+
+/*
+----------------------------------------
+Locations
+----------------------------------------
+*/
+#locations {
+  position: relative;
+  /*	.event{clear:both;}
+
+  	.event-timing{
+  		width: 25%;
+  		float: left;
+  	}
+
+  	.event-details{
+  		width: 75%;
+  		float: right;
+  	}*/
+}
+#locations .state {
+  float: none;
+  border-bottom: 1px #fff solid;
+  transition: all 300ms cubic-bezier(0.57, 0.06, 0.05, 0.95);
+  color: #999999;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+#locations .state:before {
+  display: block;
+  content: "•";
+  color: #fff;
+  position: absolute;
+  font-size: 1.25em;
+  left: 16px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#locations .state:after {
+  display: none;
+}
+#locations .state.active {
+  background-color: #eceee5;
+  color: #000000;
+}
+#locations .state:hover, #locations .state:focus {
+  background-color: #eceee5;
+  color: #000000;
+}
+#locations a {
+  margin-bottom: 0px !important;
+}
+#locations .event-address {
+  font-size: 0.85em;
+}
+#locations .event-details-group {
+  display: none;
+  position: absolute;
+  left: 33.333%;
+  height: 100%;
+  top: 0px;
+  max-height: none;
+  overflow: scroll;
+}
+#locations .event-details-group.desktop-active {
+  display: block;
+}
+#locations .event-details-group .event:nth-child(2) hr {
+  display: none;
+}
+#locations .event-date, #locations .event-time {
+  display: inline-block;
+}
+
+/*
+----------------------------------------
+FAQ
+----------------------------------------
+*/
+.faq-q {
+  height: 96px;
+  max-height: 96px;
+  overflow: hidden;
+}
+
+/*
+----------------------------------------
+Will Rogers
+----------------------------------------
+*/
+#will-rogers .large-equal-height {
+  overflow: hidden;
+}
+#will-rogers .large-equal-height:before {
+  background-image: url("../images/vcpcla2016-willrogers-03.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/*
+----------------------------------------
+Global Navigation
+----------------------------------------
+*/
+.global-navigation-handle {
+  top: 112px;
+  left: -48px;
+}
+.global-navigation-handle.in-view {
+  left: 44px;
+}
+
+#global-navigation {
+  width: 420px;
+  -ms-transform: translateX(-420px);
+  -webkit-transform: translateX(-420px);
+  transform: translateX(-420px);
+}
+#global-navigation ul {
+  font-size: 1.5em;
+}
+#global-navigation ul li a {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/*
+----------------------------------------
+Month of Clicquot
+----------------------------------------
+*/
+#month-of-clicquot h2 {
+  text-align: left;
+}
+#month-of-clicquot ul {
+  text-align: left;
+}
+#month-of-clicquot h3 {
+  text-align: left;
+}
+
+/*
+----------------------------------------
+LGD
+----------------------------------------
+*/
+.lgd-module {
+  position: relative;
+}
+.lgd-module .large--one-third {
+  position: absolute;
+  width: 33.33%;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+}
+.lgd-module .large--one-third img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+.lgd-module .large--two-thirds {
+  margin-right: 33.33%;
+}
+
+#amex-fineprint {
+  padding-bottom: 96px;
+}
+
+/*
+----------------------------------------
+Additional
+----------------------------------------
+*/
